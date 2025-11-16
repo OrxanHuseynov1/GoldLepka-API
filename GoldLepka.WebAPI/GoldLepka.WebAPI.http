@@ -1,0 +1,6 @@
+@GoldLepka.WebAPI_HostAddress = http://localhost:5007
+
+GET {{GoldLepka.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

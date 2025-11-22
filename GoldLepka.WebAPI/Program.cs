@@ -4,10 +4,17 @@ using GoldLepka.WebAPI.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Globalization; // 👈 1. Əlavə edin
+
+// Rəqəmlərin nöqtə ilə ötürülməsini təmin etmək üçün mədəniyyət parametrlərini Invariant Culture olaraq təyin edirik
+CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture; // 👈 2. Əlavə edin
+CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture; // 👈 3. Əlavə edin
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+// ... qalan xidmətlər dəyişməz qalır ...
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
@@ -32,6 +39,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+// ... qalan app konfiqurasiyası dəyişməz qalır ...
 
 if (app.Environment.IsDevelopment())
 {

@@ -20,8 +20,8 @@ public class Product : BaseEntity
     public string? MaterialName_ar { get; set; }
 
     public string Code { get; set; }
-    public int Width { get; set; } //sm
-    public int Height { get; set; } // sm
+    public decimal Width { get; set; } //sm
+    public decimal Height { get; set; } // sm
 
     // YENİ: Kataloq Əlaqəsi (Foreign Key)
     public Guid CatalogId { get; set; }

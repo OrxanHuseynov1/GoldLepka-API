@@ -24,8 +24,8 @@ public class ProductGetDto
     public string? MaterialName_ar { get; set; }
 
     public string Code { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
+    public decimal Width { get; set; }
+    public decimal Height { get; set; }
 
     public Guid CatalogId { get; set; }
 
@@ -45,8 +45,8 @@ public class ProductPostDto
     public string MaterialName { get; set; }
 
     public string Code { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
+    public decimal Width { get; set; }
+    public decimal Height { get; set; }
 
     public Guid CatalogId { get; set; }
 }
@@ -62,8 +62,8 @@ public class ProductPutDto
     public string MaterialName { get; set; }
 
     public string Code { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
+    public decimal Width { get; set; }
+    public decimal Height { get; set; }
 
     public Guid CatalogId { get; set; }
 }

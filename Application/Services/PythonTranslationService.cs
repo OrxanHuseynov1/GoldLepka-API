@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Application.Services;
-
+//
 public class PythonTranslationService : ITranslationService
 {
     // C# proqramının işə salacağı Python icra faylının mütləq yolu
